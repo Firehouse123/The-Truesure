@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Treasure of Eldoria</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #ffd700;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: 2px solid #ffd700;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        button:hover {
+            background-color: #ffd700;
+            color: #1c1c1c;
+            border-color: #f5f5f5;
+        }
+        #story {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        iframe {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<h1>The Lost Treasure of Eldoria</h1>
+
+<div id="story">
+    <img src="https://via.placeholder.com/700x400?text=Forest+of+Shadows" alt="Forest of Shadows">
+    <p>You are a young adventurer in the mystical land of Eldoria, known for its untold riches and hidden dangers. After hearing rumors of a legendary treasure hidden deep within the Forest of Shadows, you’ve decided to embark on a journey to find it.</p>
+    <p>The morning sun barely peeks through the thick canopy as you stand at the edge of the forest. The path before you is overgrown and shrouded in mist, but the promise of untold wealth drives you forward.</p>
+    <p>As you take your first steps into the forest, you hear a rustling in the bushes nearby.</p>
+    <button onclick="investigateNoise()">Investigate the noise</button>
+    <button onclick="continuePath()">Continue on the path</button>
+    <button onclick="drawWeapon()">Draw your weapon and prepare to defend yourself</button>
+</div>
+
+<script>
+    function investigateNoise() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=golden+fox" alt="Golden Fox">
+            <p>You decide to investigate the noise. Carefully, you push aside the thick undergrowth, moving closer to the source of the sound. As you part the last of the bushes, you find yourself face to face with a small, frightened creature. It's a fox, but not an ordinary one—its fur shimmers with a faint golden glow.</p>
+            <p>The fox looks at you with intelligent eyes, almost as if it’s trying to communicate. Before you can react, the fox darts off deeper into the forest, pausing momentarily to look back at you, as if beckoning you to follow.</p>
+            <button onclick="followFox()">Follow the fox</button>
+            <button onclick="ignoreFox()">Ignore the fox and continue on the path</button>
+            <button onclick="trapFox()">Set a trap to catch the fox</button>
+        `;
+    }
+
+    function continuePath() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Dark+Forest" alt="Dark Forest">
+            <p>You choose to continue on the path, leaving the noise behind. The forest grows darker and more foreboding with each step you take. Soon, you find yourself at a crossroads. The path splits into two directions.</p>
+            <p>One path seems well-trodden, with sunlight filtering through the trees. The other path is overgrown, barely visible, and leads deeper into the darkness.</p>
+            <button onclick="takeSunlitPath()">Take the sunlit path</button>
+            <button onclick="takeDarkPath()">Take the overgrown path</button>
+        `;
+    }
+
+    function drawWeapon() {
+        document.getElementById("story").innerHTML = `
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <p>You draw your weapon and prepare to defend yourself, expecting danger at every turn. The rustling grows louder, but nothing emerges from the bushes. After a few tense moments, you realize it might have been just a small animal.</p>
+            <p>With your nerves slightly on edge, you decide to continue down the path, more alert than before.</p>
+            <button onclick="continueOn()">Continue on the path</button>
+        `;
+    }
+
+    function followFox() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Altar+in+Clearing" alt="Altar in Clearing">
+            <p>You decide to follow the fox, intrigued by its mysterious nature. The fox leads you deeper into the forest, darting through the trees with a grace that’s hard to match. You keep pace as best as you can, avoiding roots and low-hanging branches.</p>
+            <p>After a few minutes of running, the fox suddenly stops in a small clearing. In the center of the clearing is an ancient, weathered stone altar covered in moss and strange carvings. The fox sits at the base of the altar, its glowing fur casting an eerie light on the stone.</p>
+            <p>As you approach, you notice that the carvings on the altar seem to depict a story. There are images of adventurers, like yourself, seeking out a powerful artifact, but also warnings of the dangers that lie ahead. The fox watches you closely, as if waiting for you to understand something important.</p>
+            <button onclick="examineCarvings()">Examine the carvings more closely</button>
+            <button onclick="searchArea()">Search the area around the altar</button>
+            <button onclick="talkToFox()">Approach the fox and try to communicate with it</button>
+        `;
+    }
+
+    function ignoreFox() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Misty+Path" alt="Misty Path">
+            <p>You decide to ignore the fox and continue on the path. The forest is full of distractions, but you keep your focus on your goal: finding the treasure of Eldoria.</p>
+            <p>As you walk, the trees grow denser and the air becomes cooler. You sense that you’re getting closer to something, though you can’t tell if it’s the treasure or something else entirely.</p>
+            <button onclick="moveForward()">Move forward</button>
+        `;
+    }
+
+    function trapFox() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Empty+Clearing" alt="Empty Clearing">
+            <p>You decide to set a trap to catch the fox. Using your knowledge of the wilderness, you quickly gather materials and set up a simple snare.</p>
+            <p>After a few moments, the fox cautiously returns to the clearing. It sniffs around the trap but seems to sense something is wrong. The fox looks at you, almost disappointed, before it turns and vanishes into the forest, leaving you alone at the altar.</p>
+            <p>It seems you’ve lost the fox’s trust, but the altar is still here.</p>
+            <button onclick="examineCarvings()">Examine the carvings more<button onclick="examineCarvings()">Examine the carvings more closely</button>
+            <button onclick="searchArea()">Search the area around the altar</button>
+        `;
+    }
+
+    function examineCarvings() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Ancient+Carvings" alt="Ancient Carvings">
+            <p>You step closer to the altar and examine the carvings. They depict a tale of an ancient treasure, hidden away by the guardians of the forest. The carvings also show that those who seek the treasure must pass a series of trials, testing their courage, wisdom, and strength.</p>
+            <p>At the base of the altar, you notice a small indentation in the shape of a fox. It seems something is meant to be placed here, but you’re not sure what.</p>
+            <button onclick="searchArea()">Search the area around the altar</button>
+            <button onclick="talkToFox()">Approach the fox and try to communicate with it</button>
+        `;
+    }
+
+    function searchArea() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Hidden+Compartment" alt="Hidden Compartment">
+            <p>You decide to search the area around the altar. After a few minutes of careful inspection, you find a small, hidden compartment at the base of the altar. Inside, there’s a beautifully carved amulet in the shape of a fox.</p>
+            <p>The amulet seems to radiate a faint warmth as you hold it. Perhaps this is the key to unlocking the altar’s secrets.</p>
+            <button onclick="placeAmulet()">Place the amulet in the indentation</button>
+        `;
+    }
+
+    function talkToFox() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Communicating+with+Fox" alt="Communicating with Fox">
+            <p>You approach the fox cautiously, trying to communicate with it. The fox tilts its head, watching you closely. You sense that the fox is somehow connected to the altar and the treasure you seek.</p>
+            <p>The fox seems to trust you, and it nudges your hand with its nose. You notice that the fox’s fur is glowing more brightly now, and its eyes seem to urge you toward the altar.</p>
+            <button onclick="examineCarvings()">Examine the carvings more closely</button>
+            <button onclick="placeAmulet()">Place the amulet in the indentation</button>
+        `;
+    }
+
+    function placeAmulet() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Secret+Staircase" alt="Secret Staircase">
+            <p>You carefully place the fox-shaped amulet into the indentation at the base of the altar. As soon as it clicks into place, the ground beneath you begins to tremble.</p>
+            <p>The altar slowly shifts, revealing a hidden staircase leading down into the earth. The fox gives you one last look, as if to say, "Good luck," before it vanishes into the trees.</p>
+            <p>You have unlocked a secret passage. Will you venture into the depths to discover the treasure?</p>
+            <button onclick="descendStaircase()">Descend the staircase</button>
+            <button onclick="leaveForest()">Leave the forest</button>
+        `;
+    }
+
+    function descendStaircase() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Ancient+Underground+Chamber" alt="Ancient Underground Chamber">
+            <p>You decide to descend the staircase. The air grows cooler and mustier as you make your way down. At the bottom, you find yourself in a vast underground chamber, filled with ancient treasures and artifacts. In the center of the chamber is a grand chest, decorated with the same fox emblem you saw on the altar.</p>
+            <p>It looks like you’ve found the legendary treasure of Eldoria. Congratulations on completing your adventure!</p>
+            <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        `;
+    }
+
+    function leaveForest() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Forest+Exit" alt="Forest Exit">
+            <p>You decide to leave the forest, feeling both relieved and a bit disappointed. The forest of Eldoria remains a place of mystery, and perhaps another adventurer will discover its secrets one day.</p>
+            <p>Thank you for playing! Your journey may have ended, but the adventure continues in your imagination.</p>
+            <button onclick="startOver()">Start Over</button>
+        `;
+    }
+
+    function startOver() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Forest+of+Shadows" alt="Forest of Shadows">
+            <p>You are a young adventurer in the mystical land of Eldoria, known for its untold riches and hidden dangers. After hearing rumors of a legendary treasure hidden deep within the Forest of Shadows, you’ve decided to embark on a journey to find it.</p>
+            <p>The morning sun barely peeks through the thick canopy as you stand at the edge of the forest. The path before you is overgrown and shrouded in mist, but the promise of untold wealth drives you forward.</p>
+            <p>As you take your first steps into the forest, you hear a rustling in the bushes nearby.</p>
+            <button onclick="investigateNoise()">Investigate the noise</button>
+            <button onclick="continuePath()">Continue on the path</button>
+            <button onclick="drawWeapon()">Draw your weapon and prepare to defend yourself</button>
+        `;
+    }
+  function moveForward() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Ancient+Forest" alt="Ancient Forest">
+            <p>You choose to move forward, pressing on despite the increasing darkness and the dense fog that envelops the forest. The trees loom high above you, and the air grows colder with every step.</p>
+            <p>After a while, you come across an old wooden sign barely visible through the mist. It points in two directions, one towards a cave entrance partially obscured by vines, and the other towards a distant, flickering light.</p>
+            <button onclick="exploreCave()">Explore the cave</button>
+            <button onclick="followLight()">Follow the flickering light</button>
+        `;
+    }
+
+    function exploreCave() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Cave+Entrance" alt="Cave Entrance">
+            <p>You decide to explore the cave. Carefully making your way inside, you are greeted by the faint sound of dripping water and the cool, damp air. The cave is narrow at first, but it opens up into a larger chamber illuminated by bioluminescent fungi growing on the walls.</p>
+            <p>In the center of the chamber, you find a pedestal with an old chest on top. The chest is covered in strange symbols and seems to be locked. On the wall behind the pedestal, there is a mural depicting a puzzle involving moving stones to match symbols.</p>
+            <button onclick="solvePuzzle()">Try to solve the puzzle</button>
+            <button onclick="searchCave()">Search the cave for clues</button>
+        `;
+    }
+
+    function followLight() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Flickering+Light" alt="Flickering Light">
+            <p>You decide to follow the flickering light. As you approach, the light grows brighter, revealing a small, open clearing. In the center of the clearing stands a mysterious figure shrouded in glowing robes, seemingly waiting for you.</p>
+            <p>The figure holds a staff and gestures for you to approach. As you get closer, you realize the figure is an ancient guardian of the forest, tasked with protecting the secrets of Eldoria.</p>
+            <button onclick="speakToGuardian()">Speak to the guardian</button>
+            <button onclick="retreat()">Retreat and reconsider your options</button>
+        `;
+    }
+
+    function solvePuzzle() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Puzzle+Solved" alt="Puzzle Solved">
+            <p>You carefully examine the mural and the symbols on the chest. Using your wits and patience, you manage to solve the puzzle by moving the stones to align the symbols correctly.</p>
+            <p>With a click, the chest opens to reveal a gleaming artifact. It seems to be an ancient relic with immense power. You’ve discovered something truly remarkable in the depths of the cave!</p>
+            <iframe src="https://www.youtube.com/embed/1Rj3tz4w7_g" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        `;
+    }
+
+    function searchCave() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Hidden+Passage" alt="Hidden Passage">
+            <p>You decide to search the cave for clues. After a thorough examination, you find a hidden passage behind a curtain of hanging vines. The passage leads deeper into the cave, suggesting there might be more to discover.</p>
+            <p>With a sense of excitement and trepidation, you decide whether to follow this new path or return to the entrance of the cave.</p>
+            <button onclick="exploreHiddenPassage()">Explore the hidden passage</button>
+            <button onclick="exitCave()">Exit the cave</button>
+        `;
+    }
+
+    function speakToGuardian() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Guardian+Revealed" alt="Guardian Revealed">
+            <p>You approach the guardian and ask about the treasure of Eldoria. The guardian speaks in a voice like rustling leaves, revealing that the treasure is a symbol of wisdom and strength, and can only be claimed by those who truly understand its significance.</p>
+            <p>The guardian offers you guidance and hints about the trials you must face to claim the treasure. With newfound knowledge, you prepare for the challenges ahead.</p>
+            <button onclick="continueJourney()">Continue your journey</button>
+        `;
+    }
+
+    function retreat() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Forest+Path" alt="Forest Path">
+            <p>You decide to retreat from the guardian and rethink your approach. The forest seems to welcome you back, and you realize that you have many paths still left to explore.</p>
+            <p>Perhaps a different approach or a new direction will lead you to the treasure.</p>
+            <button onclick="moveForward()">Move forward</button>
+        `;
+    }
+
+    function exploreHiddenPassage() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Mystical+Chamber" alt="Mystical Chamber">
+            <p>You choose to explore the hidden passage. As you navigate through the narrow tunnel, you find yourself in a mystical chamber filled with glowing crystals and ancient inscriptions.</p>
+            <p>At the center of the chamber is a pedestal with a mysterious artifact resting on it. The artifact seems to emit a soft, pulsating light, hinting at its powerful nature.</p>
+            <button onclick="takeArtifact()">Take the artifact</button>
+            <button onclick="leaveArtifact()">Leave the artifact and exit the chamber</button>
+        `;
+    }
+
+    function exitCave() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Forest+Exit" alt="Forest Exit">
+            <p>You decide to exit the cave and return to the forest. The journey has been full of surprises, and while you may not have found the treasure, you have gained valuable experiences and insights.</p>
+            <p>Thank you for playing! Your adventure has come to an end, but many more await you in the world of Eldoria.</p>
+            <button onclick="startOver()">Start Over</button>
+        `;
+    }
+
+    function continueJourney() {
+        document.getElementById("story").innerHTML = `
+            <img src="https://via.placeholder.com/700x400?text=Forest+of+Shadows" alt="Forest of Shadows">
+            <p>Armed with new insights from the guardian, you continue your journey through the Forest of Shadows. The path before you is still fraught with challenges, but you are better prepared for what lies ahead.</p>
+            <p>Your adventure continues as you delve deeper into the mysteries of Eldoria.</p>
+            <button onclick="moveForward()">Move forward</button>
+        `;
+    }
+</script>
+</script>
+
+</body>
+</html>
